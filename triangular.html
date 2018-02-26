@@ -1,0 +1,14 @@
+<script>
+function makeTriangle(value, spacing) {
+  if(value === 0) {
+    return '\n';
+  }
+
+  return '\n' + ' '.repeat(spacing) + '* '.repeat(value) + makeTriangle(value - 1, spacing + 1);
+
+}
+
+
+console.log(makeTriangle(5, 0));
+
+</script>
