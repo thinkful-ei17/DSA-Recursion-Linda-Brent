@@ -51,12 +51,24 @@ n1; n1 + n2; n1 + n2 + n3; n1+ n2 + n3 + n4;  etc.
  * * * * (4) in 1 spaces
 * * * * * (5) in 0 spaces
 
-* * * * * 
+number of spaces 5 4 3 2 1 - (values)
+number of stars  1 2 3 4 + (starts)
+driving number 5 4 3 2 1 - once reach 0 then base case (values)
 
- * * * * 
+this solution below is inverted triangle ------
+<script>
+function makeTriangle(value, spacing) {
+  if(value === 0) {
+    return '\n';
+  }
 
-  * * * 
+  return '\n' + ' '.repeat(spacing) + '* '.repeat(value) + makeTriangle(value - 1, spacing + 1)
 
-   * * 
+}
 
-    * 
+
+console.log(makeTriangle(5, 0));
+
+</script>
+
+------

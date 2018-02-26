@@ -1,14 +1,14 @@
 <script>
-function makeTriangle(value, spacing) {
-  if(value === 0) {
-    return '\n';
+  function makeTriangle(value, stars) {
+    if(value === 0) {
+      return '\n';
+    }
+  
+    return '\n' + ' '.repeat(value) + '* '.repeat(stars) + makeTriangle(value - 1, stars + 1)
+  
   }
-
-  return '\n' + ' '.repeat(spacing) + '* '.repeat(value) + makeTriangle(value - 1, spacing + 1);
-
-}
-
-
-console.log(makeTriangle(5, 0));
-
-</script>
+  
+  
+  console.log(makeTriangle(5, 1));
+  
+  </script>
