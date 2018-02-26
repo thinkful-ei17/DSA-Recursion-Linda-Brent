@@ -1,0 +1,23 @@
+<script>
+ function doubleArray(array) {
+  if (!array.length) {
+    return [];
+  }
+  
+  let doubleNumber = array[0] * 2;
+  return [doubleNumber, ...doubleArray(array.slice(1))];
+}
+
+let array = [1,2,3];
+console.log(doubleArray(array));
+</script>
+
+<!--
+Take old remaning non-doubled numbers; take the first index number and double
+return new array with doubled number added and call doubleArray again
+
+return => undefined
+in this example drill -> need to return a value; empty array b/c concatenate needs a value to work with (cannot take undefined)
+if you want to retain number must return
+
+-->
