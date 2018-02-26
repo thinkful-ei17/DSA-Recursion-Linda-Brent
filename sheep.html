@@ -1,0 +1,13 @@
+<script>
+  function sheepCounter(numberOfSheep) {
+    if (numberOfSheep < 1) {
+      console.log('no more sheep');
+      return;
+    }
+    let solution = numberOfSheep + ' - another sheep jumped over the fence';
+    console.log(solution);
+    return sheepCounter(numberOfSheep - 1);
+  }
+
+sheepCounter(5);
+</script>
