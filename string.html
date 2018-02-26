@@ -1,0 +1,12 @@
+<script>
+  function reverseMe(str) {
+    if (!str.length) {
+      return str;
+    }
+    let reversedString;
+    reversedString = str[str.length - 1];
+    return reversedString + reverseMe(str.slice(0, -1));
+  }
+
+reverseMe('hello world th9sks. is 91[');
+</script>
