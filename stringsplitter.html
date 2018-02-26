@@ -1,0 +1,16 @@
+<script>  
+function splitString(string, seperator) {
+  if( !string.length ) {
+    return [];
+  }
+  if(string[0] === separator){
+    return splitString(string.slice(0), separator)
+  }
+  const splitArr = [string[0]];
+
+  return [...splitArr, splitString(string.slice(1))];
+}
+
+
+splitString("I love memes", " ");
+</script>

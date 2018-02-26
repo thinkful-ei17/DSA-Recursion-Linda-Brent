@@ -72,3 +72,21 @@ console.log(makeTriangle(5, 0));
 </script>
 
 ------
+
+#5 String Splitter
+Split a string based upon a separator (similar to String.prototype.split).
+"I" "love memes"
+splitArr["I love memes",]
+
+if str[0] === separator{
+
+}
+
+func(str, separator)
+
+I:"I love memes", separator
+O: ["I", "love", "memes"]
+RI:
+RO:
+
+func("sjdfldsjff", " ")
