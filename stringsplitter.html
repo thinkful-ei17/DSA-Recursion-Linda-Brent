@@ -1,16 +1,14 @@
 <script>  
-function splitString(string, seperator) {
-  if( !string.length ) {
-    return [];
-  }
-  if(string[0] === separator){
-    return splitString(string.slice(0), separator)
-  }
-  const splitArr = [string[0]];
+function splitString(string, separator) {
+  const indexId = string.indexOf(separator);
 
-  return [...splitArr, splitString(string.slice(1))];
+  if( indexId === -1 ) {
+    return [string];
+  }
+
+  return [string.slice(0 , indexId), ...splitString(string.slice(indexId + separator.length), separator)];
 }
 
 
-splitString("I love memes", " ");
+console.log(splitString("I love memes", " "));
 </script>
