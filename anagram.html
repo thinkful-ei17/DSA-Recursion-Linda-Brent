@@ -4,21 +4,19 @@ function calcNum(string){
   let n = string.length;
   let i = 0;
 
-  if (n > i) {
-  i++;
-  return n * (n-i);
-  } 
+  if (n > 1) {
+    i++;
+    return n * calcNum(string.slice(i))
 }
 
-function makeAnagrams(string){
-
-
+return n;
 }
 
-
-console.log(calcNum('two'));
+console.log(calcNum('reads'));
 </script>
 
 <!--
-3 * 2 * 1 
+3 * 2 * 1  = 6
+4 * 3 * 2 * 1 = 24
+5 * 4 * 3 * 2 * 1 = 120
 -->
