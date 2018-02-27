@@ -2,17 +2,15 @@
 
 function calcNum(string){
   let n = string.length;
-  let i = 0;
 
   if (n > 1) {
-    i++;
-    return n * calcNum(string.slice(i))
+    return n * calcNum(string.slice(1))
 }
 
 return n;
 }
 
-console.log(calcNum('reads'));
+console.log(calcNum(''));
 </script>
 
 <!--
