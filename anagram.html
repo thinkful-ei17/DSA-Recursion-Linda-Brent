@@ -1,16 +1,32 @@
 <script>
 
-function calcNum(string){
-  let n = string.length;
+function calcNum(phrase){
+  let n = phrase.length;
 
   if (n > 1) {
-    return n * calcNum(string.slice(1))
+    return n * calcNum(phrase.slice(1))
 }
 
 return n;
 }
 
-console.log(calcNum(''));
+const input = 'reads';
+const permNum = calcNum(input);
+
+//don't ever modify input and permNum
+
+function anagramString(phrase) {
+  let array = [];
+  if(array.length === permNum){
+    console.log('hi');
+    return array;
+  }
+
+  return 'hello';
+
+}
+
+console.log(anagramString(input));
 </script>
 
 <!--

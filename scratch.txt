@@ -173,7 +173,7 @@ input: east
 output: [24 indiv permutations]
 Tree
 
-
+1234
 east
 eats
 esat
@@ -183,7 +183,10 @@ etsa
 
 4 * 3 * 2 * 1 = 24
 
+12
 to
+
+21
 ot
 
 2 * 1 = 2
@@ -200,6 +203,11 @@ eit
 
 what is base case? when length of array is equal to permutation calculation
 
+write out in extreme detail 
 
+seperate functions
+max permutation
+remove previously used char from avail pool
+conductor function (first entry) ===> recursive
 
 
