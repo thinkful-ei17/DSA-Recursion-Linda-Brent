@@ -1,0 +1,17 @@
+<script>
+  function giveBinary(number){
+
+    if((parseInt(number/2,10) === 0)){
+      let lastRemainder = (parseInt(number % 2, 10));
+      return lastRemainder;
+    }
+
+    let quotient = parseInt(number/2, 10);
+    let remainder = parseInt(number%2, 10);
+    return giveBinary(quotient) + [remainder];
+
+  }
+
+  console.log(giveBinary(11));
+</script>
+

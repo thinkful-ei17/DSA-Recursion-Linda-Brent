@@ -90,3 +90,65 @@ RI:
 RO:
 
 func("sjdfldsjff", " ")
+
+#6 Binary Representation
+Write a recursive function that prints out the binary representation of a given number. For example, the program should take 3 as an input and print 11 as output, or 25 as an input and print 11001 as an output. Note that the binary representation of 0 should be 0.
+
+Binary = 16 / 8 / 4 / 2 / 1
+
+if number is 25 ===> 
+16+8+1 = 25 11001
+16(1) 8(1) 4(0) 2(0) 1(1)
+
+	25/2 = 12 
+	25%2 = 1  (retain number)
+	
+	12/2 = 6
+	12%2 = 0  (retain number)
+	
+	 6/2 = 3
+	6 % 2 = 0  (retain number)
+	
+	3/2 = 1
+	3%2 = 1 (retain number)
+	
+	1/2 = 0 (base case stop when at 0)
+	1%2 = 1 (recursive number retained)
+
+
+if number is 3 ===>
+2 + 1 = 3 00011
+16(0) 8(0) 4(0) 2(1) 1(1)
+
+  3/2 = 1 
+  3%2 = 1  (retain number)
+    
+  1/2 = 0 (base case stop when at 0)
+  1%2 = 1  (retain number)
+
+
+if number is 11 ===>
+8 + 2 + 1 = 11 01011
+16(0) 8(1) 4(0) 2(1) 1(1)
+
+  11/2 = 5 
+  11%2 = 1  (retain number)
+    
+  5/2 = 2 (base case stop when at 0)
+  5%2 = 1  (retain number)  
+
+  2/2 = 1 (base case stop when at 0)
+  2%2 = 0  (retain number)  
+
+  1/2 = 0 (base case stop when at 0)
+  1%2 = 1  (retain number)  
+
+  function giveBinary(number){
+    if((number/2) === 0){
+      return (number % 2);
+    }
+    let quotient = (number/2)
+    let remainder = (number%2)
+    return remainder + giveBinary(quotient)
+
+  }
